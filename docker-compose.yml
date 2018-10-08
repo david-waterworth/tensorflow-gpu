@@ -1,0 +1,11 @@
+version: '2.3'
+
+services:
+  tensorflow-gpu:
+    image: david-waterworth/tensorflow-gpu:latest
+    restart: always
+    runtime: nvidia
+    ports:
+      - 8888:8888
+    volumes: 
+      - "~/machine-learning/notebooks:/home/jovyan/notebooks"
